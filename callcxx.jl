@@ -18,4 +18,4 @@ end
 # Call greet and show the result
 @show CppHello.greet()
 
-pkg"rm ~/.julia/dev/libhello_jll"
+pkg"rm libhello_jll"

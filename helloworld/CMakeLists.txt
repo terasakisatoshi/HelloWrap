@@ -13,7 +13,7 @@ message(STATUS "Found JlCxx at ${JlCxx_location}")
 
 add_library(hello SHARED hello.cpp)
 
-target_link_libraries(hello JlCxx::cxxwrap_julia)
+target_link_libraries(foo JlCxx::cxxwrap_julia JlCxx::cxxwrap_julia_stl)
 
 install(TARGETS
   hello

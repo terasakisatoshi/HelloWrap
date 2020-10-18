@@ -39,7 +39,7 @@ install_license ${WORKSPACE}/srcdir/${srcname}/LICENSE
 # platforms are passed in on the command line
 platforms = [
     #Linux(:armv7l; libc=:glibc, compiler_abi=CompilerABI(cxxstring_abi=:cxx11)),
-    #Windows(:x86_64; compiler_abi=CompilerABI(cxxstring_abi=:cxx11)),
+    Windows(:x86_64; compiler_abi=CompilerABI(cxxstring_abi=:cxx11)),
     Linux(:x86_64; libc=:glibc, compiler_abi=CompilerABI(cxxstring_abi=:cxx11)),
     MacOS(:x86_64; compiler_abi=CompilerABI(cxxstring_abi=:cxx11)),
 ]

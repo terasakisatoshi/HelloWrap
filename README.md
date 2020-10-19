@@ -13,7 +13,10 @@ $ julia -e 'using Pkg; Pkg.add("BinaryBuilder")'
 
 - run the following command:
 
-`$ julia build_tarball.jl --verbose --deploy=local`
+```console
+$ julia --project=@. -e 'using Pkg; Pkg.instantiate()'
+$ julia --project=@. build_tarball.jl --verbose --deploy=local
+```
 
 # Call shared library
 

@@ -7,7 +7,7 @@ version = v"0.1"
 
 projectname = "helloworld"
 
-cp("LICENSE", joinpath("helloworld", "LICENSE"), force=true)
+cp("LICENSE", joinpath(projectname, "LICENSE"), force=true)
 
 # Collection of sources required to complete build
 sources = [
@@ -22,6 +22,7 @@ if [[ $target == *"apple-darwin"* ]]; then
 fi
 
 Julia_PREFIX=$prefix
+# projectname
 srcname=helloworld
 
 mkdir build

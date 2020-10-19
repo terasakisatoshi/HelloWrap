@@ -11,7 +11,7 @@ cp("LICENSE", joinpath(projectname, "LICENSE"), force=true)
 
 # Collection of sources required to complete build
 sources = [
-    DirectorySource(projectname, target=projectname),
+    DirectorySource(projectname, target="projectname"),
 ]
 
 # Bash recipe for building across all platforms
@@ -22,8 +22,8 @@ if [[ $target == *"apple-darwin"* ]]; then
 fi
 
 Julia_PREFIX=$prefix
-# projectname
-srcname=helloworld
+
+srcname=projectname
 
 mkdir build
 cd build

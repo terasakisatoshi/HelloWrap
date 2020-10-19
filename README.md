@@ -21,14 +21,14 @@ $ julia --project=@. build_tarball.jl --verbose --deploy=local
 # Call shared library
 
 ```console
-$ julia callcxx.jl
+$ julia --project=@. callcxx.jl
 ```
 
 or
 
 ```console
 $ tar xfv products/libhello.v0.1.0.x86_64-apple-darwin14-cxx11.tar.gz -C ./products
-$ julia -q
+$ julia --project=@. -q
 julia> module CppHello
   using CxxWrap
 　const libname = joinpath("products","lib","libhello")

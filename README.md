@@ -15,7 +15,7 @@ $ julia -e 'using Pkg; Pkg.add("BinaryBuilder")'
 - run the following command:
 
 ```console
-$  export BINARYBUILDER_AUTOMATIC_APPLE=true
+$ export BINARYBUILDER_AUTOMATIC_APPLE=true
 $ julia --project=@. -e 'using Pkg; Pkg.instantiate()'
 $ julia --project=@. build_tarball.jl --verbose --deploy=local
 ```

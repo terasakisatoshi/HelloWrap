@@ -3,7 +3,7 @@
 using BinaryBuilder, Pkg
 
 name = "libhello"
-version = v"0.1"
+version = v"0.1.1"
 
 projectname = "helloworld"
 

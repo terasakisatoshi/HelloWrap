@@ -17,5 +17,5 @@ end
 
 # Call greet and show the result
 @show CppHello.greet()
-
+@show CppHello.get_array(10)
 pkg"rm libhello_jll"

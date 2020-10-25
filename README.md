@@ -1,4 +1,4 @@
-# HelloWrap
+# LibHelloBuilder.jl
 
 Call C++ Hello World shared lib via CxxWrap.jl/BinaryBuilder.jl
 

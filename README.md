@@ -56,6 +56,10 @@ end
 julia> @show CppHello.greet()
 ```
 
+# Wrap shared library
+
+You can create a Julia package that wraps [`libhello_jll.jl`](https://github.com/terasakisatoshi/libhello_jll.jl) that will call our shared library. See [LibHello.jl](https://github.com/terasakisatoshi/LibHello.jl) to learn more.
+
 
 # References
 

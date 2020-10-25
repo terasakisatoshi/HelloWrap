@@ -68,5 +68,5 @@ julia> @show CppHello.greet()
 
 # Apendix
 
-- [HelloCExecutable](https://github.com/terasakisatoshi/HelloCExecutable)  
+- [HelloCExecutableBuilder.jl](https://github.com/terasakisatoshi/HelloCExecutableBuilder.jl)  
  

@@ -20,7 +20,19 @@ $ julia --project=@. -e 'using Pkg; Pkg.instantiate()'
 $ julia --project=@. build_tarball.jl --verbose --deploy=local
 ```
 
-# Call shared library
+## Optional
+
+- If you have a GitHub account named `your_GitHub_account`, you can set `--deploy=<your_GitHub_account>/libhello_jll.jl`. It will a repository `<your_GitHub_account>/libhello_jll.jl` automatically for you.
+
+You can also upload shared library via:
+
+```julia
+julia> cd("/path/to/this/repository")
+julia> using BinaryBuilder
+julia> BinaryBuilder.upload_to_github_releases("<your_GitHub_account>/libhello_jll.jl","libhello-v0.1.0+0", joinpath(pwd(), "products"))
+```
+
+# Call shared library locally
 
 ```console
 $ julia --project=@. callcxx.jl

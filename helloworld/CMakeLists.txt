@@ -1,6 +1,6 @@
 project(CppHello)
 
-cmake_minimum_required(VERSION 3.16)
+cmake_minimum_required(VERSION 3.1)
 set(CMAKE_MACOSX_RPATH 1)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib")
 

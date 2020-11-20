@@ -49,6 +49,8 @@ products = [
 ]
 
 # Dependencies that must be installed before this package can be built
+# To provide binary for armv7l users, we need checkout libcxxwrap_julia_jll of version v0.8.2
+# its `rev` is "b5edd5de8ab5b80e8f945bf1829048ef7a4feee0".
 dependencies = [
     Dependency(PackageSpec(name="libcxxwrap_julia_jll", rev="b5edd5de8ab5b80e8f945bf1829048ef7a4feee0")),
     BuildDependency(PackageSpec(name="libjulia_jll", version=v"1.5.1")),

@@ -3,7 +3,7 @@
 using BinaryBuilder, Pkg
 
 name = "libhello"
-version = v"0.1.2"
+version = v"0.2.0"
 
 projectname = "helloworld"
 
@@ -36,13 +36,10 @@ install_license ${WORKSPACE}/srcdir/projectname/LICENSE
 
 # These are the platforms we will build for by default, unless further
 # platforms are passed in on the command line
-platforms = [
-    Linux(:armv7l; libc=:glibc),
-    Windows(:x86_64),
-    Linux(:x86_64; libc=:glibc),
-    MacOS(:x86_64),
-] |> expand_cxxstring_abis
-
+platforms = supported_platforms()
+filter!(p -> !(Sys.islinux(p) && libc(p) == :musl && arch(p) == :i686), platforms)
+platforms = expand_cxxstring_abis(platforms)
+                        
 # The products that we will ensure are always built
 products = [
     LibraryProduct("libhello", :libhello),
@@ -50,7 +47,7 @@ products = [
 
 # Dependencies that must be installed before this package can be built
 dependencies = [
-    Dependency(PackageSpec(name="libcxxwrap_julia_jll", rev="b5edd5de8ab5b80e8f945bf1829048ef7a4feee0")),
+    Dependency(PackageSpec(name="libcxxwrap_julia_jll", rev="libcxxwrap_julia-v0.8.4+0")),
     BuildDependency(PackageSpec(name="libjulia_jll", version=v"1.5.1")),
 ]
 
